@@ -1,30 +1,20 @@
-Папка для изображений.
+Folder for images.
 
-Все SVG-иконки предназначенных для спрайта кладите в `img/sprites/`:
-```
+File Structure:
+
 img/
   sprites/
-    vk.svg
-```
-
-Остальную векторную и растровую графику кладите непосредственно в папку `img/`:
-```
-img/
-  bg.jpg
-  hero.png
-  burger.svg
-```
-
-Графику можно группировать папками в `img/`:
-```
-img/
+    *.svg 
+    ...
   catalog/
-    product-1.jpg
-    product-2.jpg
+    *.jpg
+    ...
   form/
-    check.jpg
-    uncheck.jpg
-  bg.jpg
-  hero.png
-  burger.svg
-```
+    *.jpg
+    ...
+  *.jpg
+  *.png
+  *.svg
+  ...
+
+
