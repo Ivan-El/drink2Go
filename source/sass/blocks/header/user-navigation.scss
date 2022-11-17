@@ -20,6 +20,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 16px;
+
+  &:active {
+    background-color: $base-secondary;
+  }
 }
 
 .user-navigation__button--account {
@@ -43,6 +47,22 @@
     width: 80px;
     height: 80px;
   }
+
+  .user-navigation__button--account {
+    &:hover,
+    &:focus,
+    &:active {
+      background-image: url("../../../img/icons/stack.svg#user--active");
+    }
+  }
+
+  .user-navigation__button--cart {
+    &:hover,
+    &:focus,
+    &:active {
+      background-image: url("../../../img/icons/stack.svg#cart--active");
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -62,6 +82,12 @@
     padding-left: 44px;
     padding-right: 20px;
     background-position: 20px 32px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $base-primary;
+    }
   }
 
   .user-navigation__button--cart {
