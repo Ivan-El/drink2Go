@@ -5,4 +5,12 @@
 @import "global/fonts";
 
 /* BLOCKS */
-@import "blocks/header";
+@import "blocks/util//layout";
+@import "blocks/util/container";
+@import "blocks/util/visually-hidden";
+@import "blocks/header/main-header";
+@import "blocks/header/site-navigation";
+@import "blocks/header/user-navigation";
+@import "blocks/ui/button";
+@import "blocks/ui/logo.scss";
+

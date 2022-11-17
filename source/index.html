@@ -8,17 +8,21 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="no-js">
+<body class="layout no-js">
   <header class="page__header main-header">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
-    <a class="logo" href="#">
-      <img src="https://via.placeholder.com/32x36" alt="логотип компании drink2Go" width="200" height="100">
-      <span>Интернет-магазин кофейных напитков</span>
+    <a class="logo" href="index.html">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1024px)" srcset="./img/icons/stack.svg#logo-desktop">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="./img/icons/stack.svg#logo-tablet">
+        <img src="./img/icons/stack.svg#logo-mobile" alt="логотип компании drink2Go" width="32" height="36">
+      </picture>
+      <span class="logo__slogan">Интернет-магазин кофейных напитков</span>
     </a>
     <nav class="main-header__navigation">
       <ul class="site-navigation">
         <li>
-          <a class="site-navigation__link" href="#">Главная</a>
+          <a class="site-navigation__link site-navigation__link--current" href="#">Главная</a>
         </li>
         <li>
           <a class="site-navigation__link" href="#">Каталог</a>
@@ -32,13 +36,13 @@
       </ul>
       <ul class="user-navigation">
         <li>
-          <a class="button button--account" href="#">
-            <span class="visually-hidden">Личный кабинет</span>
+          <a class="user-navigation__button user-navigation__button--account" href="#" aria-label="зайти в личный кабинет">
+            <span class="user-navigation__button-text">Войти</span>
           </a>
         </li>
         <li>
-          <a class="button button--cart" href="#">
-            <span class="visually-hidden">Корзина</span>
+          <a class="user-navigation__button user-navigation__button--cart" href="#" aria-label="перейти в корзину">
+            <span class="user-navigation__button-text">Корзина</span>
           </a>
         </li>
       </ul>
@@ -47,10 +51,33 @@
       <span class="visually-hidden">Открыть меню</span>
       <span class="main-header__navigation-toggle-bar"></span>
     </button>
+
   </header>
 
-  <main class="page__main">
-    <section class="promo">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <main style="background-color: grey;" class="page__main">
+    <section class="promo container">
       <h2 class="visually-hidden">Промо товары</h2>
       <div class="swiper">
         <div class="swiper-wrapper">
@@ -58,7 +85,7 @@
             <figure>
               <img src="https://via.placeholder.com/100x100" alt="Новинка Декаф Флэт Уайт">
               <figcaption>
-                <span class="notice">Новинка</span>
+                <b class="notice">Новинка</b>
                 <h3>Декаф Флэт Уайт</h3>
                 <p>Свежесваренный кофе без кофеина из Эфиопии
                   с натуральным фермерским молоком — то, что нужно
@@ -83,7 +110,7 @@
     </section>
 
     <section class="advantages">
-      <span class="notice">Преимущества</span>
+      <b class="notice">Преимущества</b>
       <h2>Главные причины выбрать Drink2Go</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--fast">
@@ -106,7 +133,7 @@
     </section>
 
     <section class="catalog">
-      <span class="notice">Каталог</span>
+      <b class="notice">Каталог</b>
       <h2>Каталог кофейных напитков</h2>
       <section class="catalog__filter">
         <h3 class="visually-hidden">Фильтрация</h3>
@@ -237,7 +264,9 @@
     </div>
     <div class="footer__navigation footer-navigation">
       <div>
-        <dt class="footer-navigation__subtitle">Интернет-магазин</dt>
+        <dt class="footer-navigation__subtitle">
+          <h4>Интернет-магазин</h4>
+        </dt>
         <dd>
           <ul class="footer-navigation__list">
             <li>
@@ -257,7 +286,9 @@
       </div>
 
       <div>
-        <dt class="footer-navigation__subtitle">Медиа</dt>
+        <dt class="footer-navigation__subtitle">
+          <h4>Медиа</h4>
+        </dt>
         <dd>
           <ul class="footer-navigation__list">
             <li>
@@ -274,7 +305,9 @@
       </div>
 
       <div>
-        <dt class="footer-navigation__subtitle">Контакты</dt>
+        <dt class="footer-navigation__subtitle">
+          <h4>Контакты</h4>
+        </dt>
         <dd>
           <ul class="footer-navigation__list">
             <li>

@@ -1,0 +1,70 @@
+.user-navigation {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.user-navigation__button {
+  display: block;
+  width: 60px;
+  height: 60px;
+  color: inherit;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.user-navigation__button--account {
+  background-image: url("../../../img/icons/stack.svg#user");
+}
+
+.user-navigation__button--cart {
+  background-image: url("../../../img/icons/stack.svg#cart");
+}
+
+.user-navigation__button-text {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .user-navigation {
+    position: static;
+  }
+
+  .user-navigation__button {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-navigation__button-text {
+    display: inline;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .user-navigation__button {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 80px;
+    padding-left: 44px;
+    padding-right: 20px;
+    background-position: 20px 32px;
+  }
+
+  .user-navigation__button--cart {
+    margin-left: 20px;
+  }
+}

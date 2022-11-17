@@ -1,0 +1,40 @@
+.logo {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 32px;
+  height: 36px;
+}
+
+.logo__slogan {
+  display: none;
+  width: 126px;
+  margin-left: 20px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .logo img {
+    width: 82px;
+    height: 36px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 170px;
+    height: 36px;
+  }
+
+  .logo__slogan {
+    display: block;
+  }
+}
