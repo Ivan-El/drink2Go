@@ -9,10 +9,13 @@
   min-width: 320px;
 }
 
+.no-js .main-header ,
 .menu-open-js .main-header {
   margin-bottom: 229px;
   box-shadow: 0px -1px 0px 0px $base-secondary inset;
 }
+
+
 
 .main-header__navigation {
   position: relative;

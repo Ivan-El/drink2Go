@@ -25,6 +25,7 @@
   }
 }
 
+.no-js .site-navigation,
 .menu-open-js .site-navigation {
   position: absolute;
   top: 60px;
@@ -41,6 +42,7 @@
     margin: 0 auto;
   }
 
+  .no-js .site-navigation,
   .menu-open-js .site-navigation {
     position: static;
     display: flex;
