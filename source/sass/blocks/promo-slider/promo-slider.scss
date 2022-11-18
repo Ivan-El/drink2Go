@@ -176,4 +176,26 @@
   .promo-slider__footer {
     justify-content: left;
   }
+
+  .promo-slider__pagination {
+    position: absolute;
+    bottom: 60px;
+    left: calc(50% - 101px);
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 202px;
+    height: 4px;
+  }
+
+  .promo-slider__pagination-bullet {
+    display: block;
+    width: 62px;
+    height: 4px;
+    background-color: $base-white;
+  }
+
+  .promo-slider__pagination-bullet--current {
+    background-color: $base-primary;
+  }
 }

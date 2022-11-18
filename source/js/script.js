@@ -30,6 +30,9 @@ const swiper = new Swiper (".swiper", {
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
+    bulletElement: 'span',
+    bulletClass: 'promo-slider__pagination-bullet',
+    bulletActiveClass: 'promo-slider__pagination-bullet--current',
     clickable: true,
   }
 });
