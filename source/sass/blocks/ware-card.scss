@@ -1,0 +1,48 @@
+.ware-card {
+  margin: 0;
+  padding: 40px 20px 20px 18px;
+}
+
+.ware-card__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  object-fit: contain;
+}
+
+.ware-card__title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  color: $base-black;
+}
+
+.ware-card__description {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.ware-card__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.ware-card__price {
+  margin-right: 50px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: $base-black;
+}
+
+.ware-card__order-button {
+  padding: 8px 20px;
+}
+
+.ware-card__cart-button {
+  padding: 8px 20px 8px 46px;
+}

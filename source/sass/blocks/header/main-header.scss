@@ -1,4 +1,4 @@
-.main-header {
+.page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,22 +9,20 @@
   min-width: 320px;
 }
 
-.no-js .main-header ,
-.menu-open-js .main-header {
+.no-js .page-header,
+.menu-open-js .page-header {
   margin-bottom: 229px;
   box-shadow: 0px -1px 0px 0px $base-secondary inset;
 }
 
-
-
-.main-header__navigation {
+.page-header__navigation {
   position: relative;
   display: flex;
   flex-grow: 1;
   height: 100%;
 }
 
-.main-header__navigation-toggle {
+.page-header__navigation-toggle {
   position: relative;
   padding: 30px 30px 28px;
   background-color: $base-white;
@@ -36,11 +34,11 @@
   }
 }
 
-.no-js .main-header__navigation-toggle {
+.no-js .page-header__navigation-toggle {
   display: none;
 }
 
-.main-header__navigation-toggle-bar {
+.page-header__navigation-toggle-bar {
   position: absolute;
   content: "";
   top: 24px;
@@ -68,7 +66,7 @@
   }
 }
 
-.main-header__navigation-toggle--opened .main-header__navigation-toggle-bar {
+.page-header__navigation-toggle--opened .page-header__navigation-toggle-bar {
   &::before,
   &::after {
     top: 8px;
@@ -86,16 +84,16 @@
 }
 
 @media (min-width: $tablet-width) {
-  .main-header {
+  .page-header {
     padding: 0 20px;
     height: 80px;
   }
 
-  .main-header__navigation-toggle {
+  .page-header__navigation-toggle {
     display: none;
   }
 
-  .menu-open-js .main-header {
+  .menu-open-js .page-header {
     margin-bottom: 0;
     box-shadow: none;
   }

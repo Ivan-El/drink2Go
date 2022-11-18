@@ -9,7 +9,7 @@
 </head>
 
 <body class="layout no-js">
-  <header class="page__header main-header">
+  <header class="page__header page-header">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
     <a class="logo" href="index.html">
       <picture>
@@ -19,7 +19,7 @@
       </picture>
       <span class="logo__slogan">Интернет-магазин кофейных напитков</span>
     </a>
-    <nav class="main-header__navigation">
+    <nav class="page-header__navigation">
       <ul class="site-navigation">
         <li>
           <a class="site-navigation__link site-navigation__link--current" href="#">Главная</a>
@@ -36,7 +36,8 @@
       </ul>
       <ul class="user-navigation">
         <li>
-          <a class="user-navigation__button user-navigation__button--account" href="#" aria-label="зайти в личный кабинет">
+          <a class="user-navigation__button user-navigation__button--account" href="#"
+            aria-label="зайти в личный кабинет">
             <span class="user-navigation__button-text">Войти</span>
           </a>
         </li>
@@ -47,72 +48,170 @@
         </li>
       </ul>
     </nav>
-    <button class="main-header__navigation-toggle" type="button">
+    <button class="page-header__navigation-toggle" type="button">
       <span class="visually-hidden">Открыть меню</span>
-      <span class="main-header__navigation-toggle-bar"></span>
+      <span class="page-header__navigation-toggle-bar"></span>
     </button>
   </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <main class="page__main">
 
 
 
-    <section class="promo container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="promo-slider">
       <h2 class="visually-hidden">Промо товары</h2>
-      <div class="swiper">
+      <div class="swiper promo-slider__body">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <figure>
-              <img src="https://via.placeholder.com/100x100" alt="Новинка Декаф Флэт Уайт">
-              <figcaption>
-                <b class="notice">Новинка</b>
-                <h3>Декаф Флэт Уайт</h3>
-                <p>Свежесваренный кофе без кофеина из Эфиопии
-                  с натуральным фермерским молоком — то, что нужно
-                  для расслабления после тяжёлого рабочего дня</p>
-              </figcaption>
-              <div>
-                <div>
-                  <span class="promo__price--old"><s>295</s></span>
-                  <span class="promo__price--new">255</span>
-                </div>
-                <button>заказать</button>
-              </div>
-            </figure>
+          <div class="swiper-slide promo-slider__slide promo-slider__slide--flat-white">
+
+
+            <article class="ware-card promo-slider__ware">
+              <figure class="ware-card__wrapper promo-slider__ware-wrapper">
+                <picture class="promo-slider__img">
+                  <source media="(min-width: 1150px)" srcset="./img/slides/flat_white_desktop.webp 1x, ./img/slides/flat_white_desktop@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="./img/slides/flat_white_tablet.webp 1x, ./img/slides/flat_white_tablet@2x.webp 2x" type="image/webp">
+                  <source srcset="./img/slides/flat_white_mobile.webp 1x, ./img/slides/flat_white_mobile@2x.webp 2x"
+                          type="image/webp">
+                  <source media="(min-width: 1150px)"
+                          srcset="./img/slides/flat_white_desktop.png 1x, ./img/slides/flat_white_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                          srcset="./img/slides/flat_white_tablet.png 1x, ./img/slides/flat_white_tablet@2x.png 2x">
+                  <img src="./img/slides/flat_white_mobile.png"
+                       srcset="./img/slides/flat_white_mobile@2x.png 2x" alt="Новинка Декаф Флэт Уайт" width="280" height="280">
+                </picture>
+                <figcaption class="promo-slider__description-wrapper">
+                  <b class="badge promo-slider__badge">Новинка!</b>
+                  <h3 class="ware-card__title promo-slider__ware-title">Декаф Флэт Уайт</h3>
+                  <p class="ware-card__description promo-slider__ware-description">Свежесваренный кофе без кофеина из
+                    Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего
+                    дня</p>
+                  <div class="ware-card__footer promo-slider__footer">
+                    <div class="ware-card__price-wrapper">
+                      <span class="promo-slider__ware-old-price">
+                        <s>295<span>&#8381;</span></s>
+                      </span>
+                      <span class="ware-card__price promo-slider__price">255<span>&#8381;</span></span>
+                    </div>
+                    <a href="#" class="button ware-card__order-button">Заказать</a>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
           </div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+
+
+
+          <div class="swiper-slide promo-slider__slide promo-slider__slide--lavender">
+            <article class="ware-card promo-slider__ware">
+              <figure class="ware-card__wrapper promo-slider__ware-wrapper">
+                <picture class="promo-slider__img">
+                  <source media="(min-width: 1150px)" srcset="./img/slides/lavender_desktop.webp 1x, ./img/slides/lavender_desktop@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="./img/slides/lavender_tablet.webp 1x, ./img/slides/lavender_tablet@2x.webp 2x" type="image/webp">
+                  <source srcset="./img/slides/lavender_mobile.webp 1x, ./img/slides/lavender_mobile@2x.webp 2x"
+                          type="image/webp">
+                  <source media="(min-width: 1150px)"
+                          srcset="./img/slides/lavender_desktop.png 1x, ./img/slides/lavender_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                          srcset="./img/slides/lavender_tablet.png 1x, ./img/slides/lavender_tablet@2x.png 2x">
+                  <img src="./img/slides/lavender_mobile.png"
+                       srcset="./img/slides/lavender_mobile@2x.png 2x" alt="Новинка Лавандовый Латте" width="280" height="280">
+                </picture>
+                <figcaption class="promo-slider__description-wrapper">
+                  <b class="badge promo-slider__badge">Новинка!</b>
+                  <h3 class="ware-card__title promo-slider__ware-title">Лавандовый Латте</h3>
+                  <p class="ware-card__description promo-slider__ware-description">Невероятное сочетание перуанской
+                    высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
+                  </p>
+                  <div class="ware-card__footer promo-slider__footer">
+                    <div class="ware-card__price-wrapper">
+                      <span class="promo-slider__ware-old-price">
+                        <s>285<span>&#8381;</span></s>
+                      </span>
+                      <span class="ware-card__price promo-slider__price">265<span>&#8381;</span></span>
+                    </div>
+                    <a href="#" class="button ware-card__order-button">Заказать</a>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+
+
+          <div class="swiper-slide promo-slider__slide promo-slider__slide--triple-espresso">
+            <article class="ware-card promo-slider__ware">
+              <figure class="ware-card__wrapper promo-slider__ware-wrapper">
+
+
+                <picture class="promo-slider__img">
+                  <source media="(min-width: 1150px)" srcset="./img/slides/triple_espresso_desktop.webp 1x, ./img/slides/triple_espresso_desktop@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="./img/slides/triple_espresso_tablet.webp 1x, ./img/slides/triple_espresso_tablet@2x.webp 2x" type="image/webp">
+                  <source srcset="./img/slides/triple_espresso_mobile.webp 1x, ./img/slides/triple_espresso_mobile@2x.webp 2x"
+                          type="image/webp">
+                  <source media="(min-width: 1150px)"
+                          srcset="./img/slides/triple_espresso_desktop.png 1x, ./img/slides/triple_espresso_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                          srcset="./img/slides/triple_espresso_tablet.png 1x, ./img/slides/triple_espresso_tablet@2x.png 2x">
+                  <img src="./img/slides/triple_espresso_mobile.png"
+                       srcset="./img/slides/triple_espresso_mobile@2x.png 2x" alt="Новинка Тройной Эспрессо" width="280" height="280">
+                </picture>
+
+
+
+                <figcaption class="promo-slider__description-wrapper">
+                  <b class="badge promo-slider__badge">Новинка!</b>
+                  <h3 class="ware-card__title promo-slider__ware-title">Тройной Эспрессо</h3>
+                  <p class="ware-card__description promo-slider__ware-description">Мощнее укола адреналина, чернее самой
+                    тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                  <div class="ware-card__footer promo-slider__footer">
+                    <div class="ware-card__price-wrapper">
+                      <span class="promo-slider__ware-old-price">
+                        <s>395<span>&#8381;</span></s>
+                      </span>
+                      <span class="ware-card__price promo-slider__price">375<span>&#8381;</span></span>
+                    </div>
+                    <a href="#" class="button ware-card__order-button">Заказать</a>
+                  </div>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination promo-slider__pagination">
+        </div>
+        <button class="swiper-button-prev promo-slider__button promo-slider__buton--prev" type="button">
+        </button>
+        <button class="swiper-button-next promo-slider__button promo-slider__buton--next" type="button"></button>
       </div>
     </section>
-
     <section class="advantages">
-      <b class="notice">Преимущества</b>
+      <b class="badge">Преимущества</b>
       <h2>Главные причины выбрать Drink2Go</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--fast">
@@ -135,14 +234,14 @@
     </section>
 
     <section class="catalog">
-      <b class="notice">Каталог</b>
+      <b class="badge">Каталог</b>
       <h2>Каталог кофейных напитков</h2>
       <section class="catalog__filter">
         <h3 class="visually-hidden">Фильтрация</h3>
         <form class="filter__form filter-form" method="POST" action="#">
           <fieldset class="filter-form__fieldset">
             <legend class="filter-form__legend">Цена</legend>
-            <input type="range" name="" id="">
+            <input type="range">
             <div>
               <span>min</span>
               -
@@ -151,18 +250,18 @@
           </fieldset>
           <fieldset class="filter-form__fieldset">
             <legend class="filter-form__legend">Наличие молока</legend>
-            <input type="radio" name="availability milk" id="">Неважно
-            <input type="radio" name="availability milk" id="">Только животное
-            <input type="radio" name="availability milk" id="">Только растительное
-            <input type="radio" name="availability milk" id="">Без молока
+            <input type="radio" name="availability milk">Неважно
+            <input type="radio" name="availability milk">Только животное
+            <input type="radio" name="availability milk">Только растительное
+            <input type="radio" name="availability milk">Без молока
           </fieldset>
           <fieldset class="filter-form__fieldset">
             <legend class="filter-form__legend">Страна произрастания</legend>
-            <input type="checkbox" name="" id="">Бразилия
-            <input type="checkbox" name="" id="">Эфиопия
-            <input type="checkbox" name="" id="">Колумбия
-            <input type="checkbox" name="" id="">Коста-Рика
-            <input type="checkbox" name="" id="">Перу
+            <input type="checkbox" name="Brasil">Бразилия
+            <input type="checkbox" name="Ephiopia">Эфиопия
+            <input type="checkbox" name="Columbia">Колумбия
+            <input type="checkbox" name="Costa-Ricco">Коста-Рика
+            <input type="checkbox" name="Peru">Перу
           </fieldset>
           <div>
             <button class="filter-form__submit-button" type="submit">Применить фильтр</button>
@@ -189,7 +288,7 @@
         </ul>
       </section>
 
-      <section class="catalog__wares wares">
+      <!-- <section class="catalog__wares wares">
         <h3 class="visually-hidden">Каталог товаров</h3>
         <ul class="wares__list">
           <li>
@@ -199,16 +298,17 @@
                 <figcaption>
                   <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
                   <p class="ware-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="ware-card__buy-wrapper">
+                    <span class="ware-card__price">225</span>
+                    <button class="ware-card__cart-button" type="button">В корзину</button>
+                  </div>
                 </figcaption>
-                <div class="ware-card__buy-wrapper">
-                  <span class="ware-card__price">225</span>
-                  <button class="ware-card__buy-button" type="button">В корзину</button>
-                </div>
+
               </figure>
             </article>
           </li>
         </ul>
-      </section>
+      </section> -->
       <ul class="catalog__pagination pagination">
         <li>
           <a class="pagination__link" href="#">
@@ -233,41 +333,45 @@
     </section>
 
     <section class="map">
-      TODO
+      <h2>todo</h2>
     </section>
   </main>
 
 
   <footer class="page__footer footer">
     <div class="footer__socials">
-      <a class="logo" href="#">
-        <img src="" alt="логотип">
+      <a class="logo" href="index.html">
+        <picture>
+          <source type="image/svg+xml" media="(min-width: 768px)" srcset="./img/icons/stack.svg#logo-desktop">
+          <img src="./img/icons/stack.svg#logo-mobile" alt="логотип компании drink2Go" width="32" height="36">
+        </picture>
+        <span class="logo__slogan">Интернет-магазин кофейных напитков</span>
       </a>
       <ul class="socials">
         <li class="socials__item">
           <a href="">
-            <img src="" alt="">
+            <img src="https://via.placeholder.com/20x20" alt="vk">
             <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="socials__item">
           <a href="">
-            <img src="" alt="">
+            <img src="https://via.placeholder.com/20x20" alt="prtrst">
             <span class="visually-hidden">Pinterest</span>
           </a>
         </li>
         <li class="socials__item">
           <a href="">
-            <img src="" alt="">
+            <img src="https://via.placeholder.com/20x20" alt="Odnoklass">
             <span class="visually-hidden">Одноклассники</span>
           </a>
         </li>
       </ul>
     </div>
-    <div class="footer__navigation footer-navigation">
+    <dl class="footer__navigation footer-navigation">
       <div>
         <dt class="footer-navigation__subtitle">
-          <h4>Интернет-магазин</h4>
+          Интернет-магазин
         </dt>
         <dd>
           <ul class="footer-navigation__list">
@@ -289,7 +393,7 @@
 
       <div>
         <dt class="footer-navigation__subtitle">
-          <h4>Медиа</h4>
+          Медиа
         </dt>
         <dd>
           <ul class="footer-navigation__list">
@@ -308,7 +412,7 @@
 
       <div>
         <dt class="footer-navigation__subtitle">
-          <h4>Контакты</h4>
+          Контакты
         </dt>
         <dd>
           <ul class="footer-navigation__list">
@@ -321,12 +425,13 @@
           </ul>
         </dd>
       </div>
-    </div>
+    </dl>
     <div class="footer__copyright">
       <a href="">Разработано в HTML Academy</a>
     </div>
   </footer>
-
+  <script src="./js/libs/swiper-bundle.min.js
+  "></script>
   <script src="./js/script.js" defer></script>
 </body>
 
