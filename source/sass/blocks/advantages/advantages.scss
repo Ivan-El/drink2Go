@@ -1,0 +1,111 @@
+.advantages {
+  padding: 50px 0 60px;
+}
+
+.advantages__badge {
+  margin-bottom: 4px;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.advantages__item {
+  padding: 66px 38px 0;
+  margin-bottom: 32px;
+  background-repeat: no-repeat;
+  background-size: 52px 56px;
+  background-position: center 0;
+}
+
+.advantages__item--fast {
+  background-image: url("../../../img/icons/stack.svg#feature-fast-icon");
+}
+
+.advantages__item--convenience {
+  background-image: url("../../../img/icons/stack.svg#feature-convenience-icon");
+}
+
+.advantages__item--cheerfulness {
+  background-image: url("../../../img/icons/stack.svg#feature-cheerfulness-icon");
+}
+
+.advantages__item--ecological {
+  background-image: url("../../../img/icons/stack.svg#feature-ecological-icon");
+}
+
+.advantages__item-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.advantages__item-description {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    padding: 60px 0 100px;
+  }
+
+  .advantages__title {
+    margin-bottom: 60px;
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 50px;
+    text-align: left;
+    padding: 0 30px;
+  }
+
+  .advantages__item {
+    margin-bottom: 0;
+    padding: 0 50px 0 72px;
+    background-position: 0 center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    padding: 100px 0 120px;
+  }
+
+  .advantages__title {
+    margin-bottom: 80px;
+  }
+
+  .advantages__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0 30px;
+    text-align: center;
+    padding: 0 40px;
+  }
+
+  .advantages__item {
+    margin-bottom: 0;
+    padding: 76px 38px 0;
+    background-position: center 0;
+  }
+
+  .advantages__item:nth-child(2) {
+    padding: 76px 58px 0;;
+  }
+}
