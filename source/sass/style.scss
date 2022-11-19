@@ -11,16 +11,20 @@
 
 /* BLOCKS */
 @import "blocks/swiper/swiper";
+@import "blocks/noUiSlider/nouislider";
 @import "blocks/button";
-@import "blocks/logo.scss";
-@import "blocks/badge.scss";
-@import "blocks/ware-card.scss";
+@import "blocks/logo";
+@import "blocks/badge";
+@import "blocks/ware-card";
 @import "blocks/header/main-header";
 @import "blocks/header/site-navigation";
 @import "blocks/header/user-navigation";
-@import "blocks/promo-slider/promo-slider.scss";
+@import "blocks/promo-slider/promo-slider";
 @import "blocks/advantages/advantages";
 @import "blocks/catalog/catalog";
+@import "blocks/catalog/filter-form";
+@import "blocks/catalog/range-slider";
+@import "blocks/catalog/sort-select";
 
 
 

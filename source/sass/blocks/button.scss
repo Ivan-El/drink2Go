@@ -6,5 +6,34 @@
   background-color: $base-primary;
   border: none;
   border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+}
+
+.button--secondary {
+  color: $base-primary;
+  background-color: $base-white;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:disabled {
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+  }
 }
 

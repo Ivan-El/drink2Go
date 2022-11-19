@@ -1,3 +1,20 @@
 .catalog {
+  padding: 50px 20px 44px;
   background-color: $lightest-grey;
+}
+
+.catalog__badge {
+  margin-bottom: 4px;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
 }
