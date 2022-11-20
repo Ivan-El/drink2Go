@@ -1,6 +1,7 @@
 .ware-card {
   margin: 0;
   padding: 40px 20px 20px 18px;
+  background-color: $base-white;
 }
 
 .ware-card__wrapper {
@@ -24,11 +25,13 @@
 .ware-card__description {
   margin: 0;
   margin-bottom: 16px;
+  padding-right: 30px;
 }
 
 .ware-card__footer {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .ware-card__price {
@@ -45,4 +48,8 @@
 
 .ware-card__cart-button {
   padding: 8px 20px 8px 46px;
+  background-image: url("../../../img/icons/stack.svg#fill-cart");
+  background-size: 20px 16px;
+  background-repeat: no-repeat;
+  background-position: 20px center;
 }

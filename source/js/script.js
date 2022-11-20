@@ -31,6 +31,7 @@ if (navList) {
 // Slider
 
 const swiper = new Swiper(".swiper", {
+  loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -154,11 +155,3 @@ customSelect.addEventListener("click", function (evt) {
     target.classList.add("sort-select__option--current");
   }
 });
-
-// navList.addEventListener("click", (evt) => {
-//   const curTarget = evt.currentTarget;
-//   const { target } = evt;
-//   if (target.classList.contains("site-navigation__link")) {
-
-//   }
-// });
