@@ -1,0 +1,113 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  padding-top: 40px;
+  list-style: none;
+}
+
+.pagination__link,
+.pagination__link-prev,
+.pagination__link-next {
+  display: block;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: $base-primary;
+  text-decoration: none;
+  background-color: $base-white;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    color: $base-white;
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    color: $base-white;
+    background-color: $light-grey;
+  }
+}
+
+.pagination__tablet-link-text {
+  display: none;
+}
+
+.pagination__link-prev,
+.pagination__link-next {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  background-image: url("../../../img/icons/stack.svg#pagination-arrow");
+
+  &:hover,
+  &:focus,
+  &:disabled,
+  &:active {
+    background-image: url("../../../img/icons/stack.svg#pagination-arrow-white");
+  }
+}
+
+.pagination__link-next {
+  transform: rotate(180deg);
+}
+
+.pagination__link--current {
+  font-weight: 600;
+  color: $base-black;
+  background-color: transparent;
+}
+
+@media (min-width: $tablet-width) {
+  .pagination {
+    justify-content: flex-end;
+    gap: 0;
+    margin-right: -28px;
+  }
+
+  .pagination__tablet-link-text {
+    display: inline;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .pagination__link--first {
+    border-radius: 0 4px 4px 0;
+  }
+
+  .pagination__link--last {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .pagination__link-prev,
+  .pagination__link-next {
+    width: 150px;
+    background: none;
+    background-color: $base-white;
+  }
+
+  .pagination__link-prev {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .pagination__link-next {
+    transform: rotate(0deg);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination {
+    grid-column: 1/ -1;
+  }
+}

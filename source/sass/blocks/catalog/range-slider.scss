@@ -89,6 +89,16 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .range-slider {
+    padding-left: 7px;
+  }
+
+  .range-slider__js {
+    margin-top: 10px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .range-slider__js {
     width: 100%;

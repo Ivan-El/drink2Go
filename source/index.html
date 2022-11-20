@@ -153,8 +153,8 @@
                   <source media="(min-width: 768px)"
                     srcset="./img/slides/triple_espresso_tablet.png 1x, ./img/slides/triple_espresso_tablet@2x.png 2x">
                   <img src="./img/slides/triple_espresso_mobile.png"
-                    srcset="./img/slides/triple_espresso_mobile@2x.png 2x" alt="жестяная банка черного цвета с кофе" width="280"
-                    height="280">
+                    srcset="./img/slides/triple_espresso_mobile@2x.png 2x" alt="жестяная банка черного цвета с кофе"
+                    width="280" height="280">
                 </picture>
                 <figcaption class="promo-slider__description-wrapper">
                   <b class="badge promo-slider__badge">Новинка!</b>
@@ -207,12 +207,16 @@
     </section>
 
     <section class="catalog">
-      <b class="badge catalog__badge">Каталог</b>
-      <h2 class="catalog__title">Каталог кофейных напитков</h2>
+
+
+      <div class="catalog__title-wrapper">
+        <b class="badge catalog__badge">Каталог</b>
+        <h2 class="catalog__title">Каталог кофейных напитков</h2>
+      </div>
       <section class="catalog__filter">
         <h3 class="visually-hidden">Фильтрация каталога</h3>
         <form class="catalog__form filter-form" action="https://echo.htmlacademy.ru" method="GET" target="_blank">
-          <fieldset class="filter-form__fieldset">
+          <fieldset class="filter-form__fieldset filter-form__fieldset--range">
             <legend class="filter-form__legend">Цена</legend>
             <div class="range-slider">
               <div class="range-slider__js"></div>
@@ -228,7 +232,7 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="filter-form__fieldset">
+          <fieldset class="filter-form__fieldset filter-form__fieldset--radio">
             <legend class="filter-form__legend">Наличие молока</legend>
             <label class="filter-form__label filter-form__label--radio">
               <input class="visually-hidden filter-form__radio-button" type="radio" name="availability-milk"
@@ -294,211 +298,155 @@
           </div>
         </form>
       </section>
+      <div>
+        <section class="catalog__sort-select sort-select">
+          <h3 class="visually-hidden">Сортировка по параметру</h3>
+          <p class="sort-select__text">Сортировка:</p>
+          <div class="sort-select__current-select">
+            <button class="sort-select__toggle" type="button">
+              <span class="visually-hidden">Выбирите параметр сортировки</span>
+            </button>
+            <ul class="sort-select__option-list">
+              <li class="sort-select__option sort-select__option--current" data-value="default">по умолчанию </li>
+              <li class="sort-select__option" data-value="expensive">сначала дорогие</li>
+              <li class="sort-select__option" data-value="cheap">сначала дешёвые</li>
+              <li class="sort-select__option" data-value="high rating">высокий рейтинг</li>
+            </ul>
+          </div>
+        </section>
 
-      <section class="catalog__sort-select sort-select">
-        <h3 class="visually-hidden">Сортировка по параметру</h3>
-        <p class="sort-select__text">Сортировка:</p>
-        <div class="sort-select__current-select">
-          <button class="sort-select__toggle" type="button">
-            <span class="visually-hidden">Выбирите параметр сортировки</span>
-          </button>
-          <ul class="sort-select__option-list">
-            <li class="sort-select__option sort-select__option--current" data-value="default">по умолчанию </li>
-            <li class="sort-select__option" data-value="expensive">сначала дорогие</li>
-            <li class="sort-select__option" data-value="cheap">сначала дешёвые</li>
-            <li class="sort-select__option" data-value="high rating">высокий рейтинг</li>
+        <section class="catalog__wares wares">
+          <h3 class="visually-hidden">Каталог товаров</h3>
+          <ul class="wares__list">
+            <li>
+              <article class="ware-card wares__ware-card">
+                <figure class="ware-card__wrapper">
+                  <picture>
+                    <source srcset="./img/catalog/coffee_1.webp 1x, ./img/catalog/coffee_1@2x.webp 2x"
+                      type="image/webp">
+                    <img src="./img/catalog/coffee_1.png" srcset="./img/catalog/coffee_1@2x.png 2x"
+                      alt="жестяная банка пастельно-розового цвета с кофе" width="130" height="188">
+                  </picture>
+                  <figcaption>
+                    <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
+                    <p class="ware-card__description">Кофе без кофеина из Эфиопии <br
+                        class="ware-card__description-break-tablet"> с натуральным фермерским молоком</p>
+                    <div class="ware-card__footer">
+                      <span class="ware-card__price">225<span>&#8381;</span></span>
+                      <a class="button ware-card__cart-button" href="#" type="button">В корзину</a>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+            </li>
+            <li>
+              <article class="ware-card wares__ware-card">
+                <figure class="ware-card__wrapper">
+                  <picture>
+                    <source srcset="./img/catalog/coffee_2.webp 1x, ./img/catalog/coffee_2@2x.webp 2x"
+                      type="image/webp">
+                    <img src="./img/catalog/coffee_2.png" srcset="./img/catalog/coffee_2@2x.png 2x"
+                      alt="жестяная банка лавандового цвета с кофе" width="130" height="188">
+                  </picture>
+                  <figcaption>
+                    <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
+                    <p class="ware-card__description">Кофе без кофеина из Эфиопии <br
+                        class="ware-card__description-break-tablet"> с натуральным фермерским молоком</p>
+                    <div class="ware-card__footer">
+                      <span class="ware-card__price">225<span>&#8381;</span></span>
+                      <a class="button ware-card__cart-button" href="#" type="button">В корзину</a>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+            </li>
+            <li>
+              <article class="ware-card wares__ware-card">
+                <figure class="ware-card__wrapper">
+                  <picture>
+                    <source srcset="./img/catalog/coffee_3.webp 1x, ./img/catalog/coffee_3@2x.webp 2x"
+                      type="image/webp">
+                    <img src="./img/catalog/coffee_3.png" srcset="./img/catalog/coffee_3@2x.png 2x"
+                      alt="жестяная банка черного цвета с кофе" width="130" height="188">
+                  </picture>
+                  <figcaption>
+                    <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
+                    <p class="ware-card__description">Кофе без кофеина из Эфиопии <br
+                        class="ware-card__description-break-tablet"> с натуральным фермерским молоком</p>
+                    <div class="ware-card__footer">
+                      <span class="ware-card__price">225<span>&#8381;</span></span>
+                      <a class="button ware-card__cart-button" href="#" type="button">В корзину</a>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+            </li>
+            <li>
+              <article class="ware-card wares__ware-card">
+                <figure class="ware-card__wrapper">
+                  <picture>
+                    <source srcset="./img/catalog/coffee_4.webp 1x, ./img/catalog/coffee_4@2x.webp 2x"
+                      type="image/webp">
+                    <img src="./img/catalog/coffee_4.png" srcset="./img/catalog/coffee_4@2x.png 2x"
+                      alt="жестяная банка розового цвета с кофе" width="130" height="188">
+                  </picture>
+                  <figcaption>
+                    <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
+                    <p class="ware-card__description">Кофе без кофеина из Эфиопии <br
+                        class="ware-card__description-break-tablet"> с натуральным фермерским молоком</p>
+                    <div class="ware-card__footer">
+                      <span class="ware-card__price">225<span>&#8381;</span></span>
+                      <a class="button ware-card__cart-button" href="#" type="button">В корзину</a>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+            </li>
+            <li>
+              <article class="ware-card wares__ware-card">
+                <figure class="ware-card__wrapper">
+                  <picture>
+                    <source srcset="./img/catalog/coffee_5.webp 1x, ./img/catalog/coffee_5@2x.webp 2x"
+                      type="image/webp">
+                    <img src="./img/catalog/coffee_5.png" srcset="./img/catalog/coffee_5@2x.png 2x"
+                      alt="жестяная банка бежевого цвета с кофе" width="130" height="188">
+                  </picture>
+                  <figcaption>
+                    <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
+                    <p class="ware-card__description">Кофе без кофеина из Эфиопии <br
+                        class="ware-card__description-break-tablet"> с натуральным фермерским молоком</p>
+                    <div class="ware-card__footer">
+                      <span class="ware-card__price">225<span>&#8381;</span></span>
+                      <a class="button ware-card__cart-button" href="#" type="button">В корзину</a>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+            </li>
+            <li>
+              <article class="ware-card wares__ware-card">
+                <figure class="ware-card__wrapper">
+                  <picture>
+                    <source srcset="./img/catalog/coffee_6.webp 1x, ./img/catalog/coffee_6@2x.webp 2x"
+                      type="image/webp">
+                    <img src="./img/catalog/coffee_6.png" srcset="./img/catalog/coffee_6@2x.png 2x"
+                      alt="жестяная банка пастельно-бежевого цвета с кофе" width="130" height="188">
+                  </picture>
+                  <figcaption>
+                    <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
+                    <p class="ware-card__description">Кофе без кофеина из Эфиопии <br
+                        class="ware-card__description-break-tablet"> с натуральным фермерским молоком</p>
+                    <div class="ware-card__footer">
+                      <span class="ware-card__price">225<span>&#8381;</span></span>
+                      <a class="button ware-card__cart-button" href="#" type="button">В корзину</a>
+                    </div>
+                  </figcaption>
+                </figure>
+              </article>
+            </li>
           </ul>
-        </div>
-      </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- <article class="ware-card promo-slider__ware">
-        <figure class="ware-card__wrapper promo-slider__ware-wrapper">
-          <picture class="promo-slider__img">
-            <source media="(min-width: 1150px)"
-              srcset="./img/slides/triple_espresso_desktop.webp 1x, ./img/slides/triple_espresso_desktop@2x.webp 2x"
-              type="image/webp">
-            <source media="(min-width: 768px)"
-              srcset="./img/slides/triple_espresso_tablet.webp 1x, ./img/slides/triple_espresso_tablet@2x.webp 2x"
-              type="image/webp">
-            <source
-              srcset="./img/slides/triple_espresso_mobile.webp 1x, ./img/slides/triple_espresso_mobile@2x.webp 2x"
-              type="image/webp">
-            <source media="(min-width: 1150px)"
-              srcset="./img/slides/triple_espresso_desktop.png 1x, ./img/slides/triple_espresso_desktop@2x.png 2x">
-            <source media="(min-width: 768px)"
-              srcset="./img/slides/triple_espresso_tablet.png 1x, ./img/slides/triple_espresso_tablet@2x.png 2x">
-            <img src="./img/slides/triple_espresso_mobile.png"
-              srcset="./img/slides/triple_espresso_mobile@2x.png 2x" alt="Новинка Тройной Эспрессо" width="280"
-              height="280">
-          </picture>
-          <figcaption class="promo-slider__description-wrapper">
-            <b class="badge promo-slider__badge">Новинка!</b>
-            <h3 class="ware-card__title promo-slider__ware-title">Тройной Эспрессо</h3>
-            <p class="ware-card__description promo-slider__ware-description">Мощнее укола адреналина, чернее самой
-              тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-            <div class="ware-card__footer promo-slider__footer">
-              <div class="ware-card__price-wrapper">
-                <span class="promo-slider__ware-old-price">
-                  <s>395<span>&#8381;</span></s>
-                </span>
-                <span class="ware-card__price promo-slider__price">375<span>&#8381;</span></span>
-              </div>
-              <a href="#" class="button ware-card__order-button">Заказать</a>
-            </div>
-          </figcaption>
-        </figure>
-      </article> -->
-
-
-      <section class="catalog__wares wares">
-        <h3 class="visually-hidden">Каталог товаров</h3>
-        <ul class="wares__list">
-          <!-- 1 -->
-          <li>
-            <article class="ware-card">
-              <figure class="ware-card__wrapper">
-                <picture>
-                  <source srcset="./img/catalog/coffee_1.webp 1x, ./img/catalog/coffee_1@2x.webp 2x" type="image/webp">
-                  <img src="./img/catalog/coffee_1.png" srcset="./img/catalog/coffee_1@2x.png 2x"
-                    alt="жестяная банка пастельно-розового цвета с кофе" width="130" height="188">
-                </picture>
-                <figcaption>
-                  <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
-                  <p class="ware-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="ware-card__footer">
-                    <span class="ware-card__price">225<span>&#8381;</span></span>
-                    <a class="button ware-card__cart-button" href="#" type="button">В корзину</a>
-                  </div>
-                </figcaption>
-              </figure>
-            </article>
-          </li>
-          <!-- 2 -->
-          <li>
-            <article class="ware-card">
-              <figure class="ware-card__wrapper">
-                <picture>
-                  <source srcset="./img/catalog/coffee_2.webp 1x, ./img/catalog/coffee_2@2x.webp 2x" type="image/webp">
-                  <img src="./img/catalog/coffee_2.png" srcset="./img/catalog/coffee_2@2x.png 2x"
-                    alt="жестяная банка лавандового цвета с кофе" width="130" height="188">
-                </picture>
-                <figcaption>
-                  <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
-                  <p class="ware-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="ware-card__footer">
-                    <span class="ware-card__price">225<span>&#8381;</span></span>
-                    <a class="button ware-card__cart-button" href="#" type="button">В корзину</a>
-                  </div>
-                </figcaption>
-              </figure>
-            </article>
-          </li>
-          <!-- 3 -->
-          <li>
-            <article class="ware-card">
-              <figure class="ware-card__wrapper">
-                <picture>
-                  <source srcset="./img/catalog/coffee_3.webp 1x, ./img/catalog/coffee_3@2x.webp 2x" type="image/webp">
-                  <img src="./img/catalog/coffee_3.png" srcset="./img/catalog/coffee_3@2x.png 2x"
-                    alt="жестяная банка черного цвета с кофе" width="130" height="188">
-                </picture>
-                <figcaption>
-                  <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
-                  <p class="ware-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="ware-card__footer">
-                    <span class="ware-card__price">225<span>&#8381;</span></span>
-                    <a class="button ware-card__cart-button" href="#" type="button">В корзину</a>
-                  </div>
-                </figcaption>
-              </figure>
-            </article>
-          </li>
-          <!-- 4 -->
-          <li>
-            <article class="ware-card">
-              <figure class="ware-card__wrapper">
-                <picture>
-                  <source srcset="./img/catalog/coffee_4.webp 1x, ./img/catalog/coffee_4@2x.webp 2x" type="image/webp">
-                  <img src="./img/catalog/coffee_4.png" srcset="./img/catalog/coffee_4@2x.png 2x"
-                    alt="жестяная банка розового цвета с кофе" width="130" height="188">
-                </picture>
-                <figcaption>
-                  <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
-                  <p class="ware-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="ware-card__footer">
-                    <span class="ware-card__price">225<span>&#8381;</span></span>
-                    <a class="button ware-card__cart-button" href="#" type="button">В корзину</a>
-                  </div>
-                </figcaption>
-              </figure>
-            </article>
-          </li>
-          <!-- 5 -->
-          <li>
-            <article class="ware-card">
-              <figure class="ware-card__wrapper">
-                <picture>
-                  <source srcset="./img/catalog/coffee_5.webp 1x, ./img/catalog/coffee_5@2x.webp 2x" type="image/webp">
-                  <img src="./img/catalog/coffee_5.png" srcset="./img/catalog/coffee_5@2x.png 2x"
-                    alt="жестяная банка бежевого цвета с кофе" width="130" height="188">
-                </picture>
-                <figcaption>
-                  <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
-                  <p class="ware-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="ware-card__footer">
-                    <span class="ware-card__price">225<span>&#8381;</span></span>
-                    <a class="button ware-card__cart-button" href="#" type="button">В корзину</a>
-                  </div>
-                </figcaption>
-              </figure>
-            </article>
-          </li>
-          <!-- 6 -->
-          <li>
-            <article class="ware-card">
-              <figure class="ware-card__wrapper">
-                <picture>
-                  <source srcset="./img/catalog/coffee_6.webp 1x, ./img/catalog/coffee_6@2x.webp 2x" type="image/webp">
-                  <img src="./img/catalog/coffee_6.png" srcset="./img/catalog/coffee_6@2x.png 2x"
-                    alt="жестяная банка пастельно-бежевого цвета с кофе" width="130" height="188">
-                </picture>
-                <figcaption>
-                  <h1 class="ware-card__title">Декаф Флэт Уайт</h1>
-                  <p class="ware-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="ware-card__footer">
-                    <span class="ware-card__price">225<span>&#8381;</span></span>
-                    <a class="button ware-card__cart-button" href="#" type="button">В корзину</a>
-                  </div>
-                </figcaption>
-              </figure>
-            </article>
-          </li>
-        </ul>
-      </section>
-
-
-
-
-
+        </section>
+      </div>
 
 
 
@@ -515,29 +463,42 @@
 
       <ul class="catalog__pagination pagination">
         <li>
-          <a class="pagination__link" href="#">
-            <span class="visually-hidden">Предыдущая страница</span>
+          <a class="pagination__link-prev" href="#">
+            <span class="pagination__tablet-link-text">Назад</span>
           </a>
         </li>
         <li>
-          <a class="pagination__link" href="#">1</a>
+          <a class="pagination__link pagination__link--first" href="#">1</a>
         </li>
         <li>
           <a class="pagination__link pagination__link--current" href="#">2</a>
         </li>
         <li>
-          <a class="pagination__link" href="#">3</a>
+          <a class="pagination__link pagination__link--last" href="#">3</a>
         </li>
         <li>
-          <a class="pagination__link" href="#">
-            <span class="visually-hidden">Следующая страница</span>
+          <a class="pagination__link-next" href="#">
+            <span class="pagination__tablet-link-text">Вперёд</span>
           </a>
         </li>
       </ul>
+
+
+
+
+
+
+
+
+
+
+
+
     </section>
 
     <section class="map">
-      <h2>todo</h2>
+      <h2 class="visually-hidden">Интерактивная карта</h2>
+      <div class="leaflet-map-js" id="leaflet-map-js"></div>
     </section>
   </main>
 
@@ -634,6 +595,7 @@
       <a href="">Разработано в HTML Academy</a>
     </div>
   </footer>
+  <script src="./js/libs/leaflet.js"></script>
   <script src="./js/libs/swiper-bundle.min.js
   "></script>
   <script src="./js/libs/nouislider.min.js"></script>

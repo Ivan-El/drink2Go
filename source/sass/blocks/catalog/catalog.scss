@@ -17,4 +17,21 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog {
+    padding: 80px 20px 90px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    display: grid;
+    grid-template-columns:auto max-content;
+    padding: 100px 40px 120px;
+  }
+
+  .catalog__title-wrapper {
+    grid-column: 1/-1;
+  }
+
 }

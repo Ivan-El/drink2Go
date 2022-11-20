@@ -1,5 +1,5 @@
 .filter-form {
-padding-bottom: 36px;
+  padding-bottom: 36px;
 }
 
 .filter-form__fieldset {
@@ -165,7 +165,6 @@ padding-bottom: 36px;
 .filter-form__buttons-wrapper {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
 }
 
@@ -184,3 +183,46 @@ padding-bottom: 36px;
 .filter-form__reset-button {
   font-size: 14px;
 }
+
+@media (min-width: $tablet-width) {
+  .filter-form {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    padding-bottom: 44px;
+  }
+
+  .filter-form__legend {
+    margin-bottom: 20px;
+  }
+
+  .filter-form__fieldset {
+    margin: 0;
+  }
+
+  .filter-form__fieldset--range {
+    margin-right: 22px;
+  }
+
+  .filter-form__fieldset--radio {
+    margin-right: 39px;
+  }
+
+  .filter-form__buttons-wrapper {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .filter-form__submit-button {
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter-form {
+    grid-template-columns: min-content;
+  }
+}
+
+

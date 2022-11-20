@@ -10,7 +10,6 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  object-fit: contain;
 }
 
 .ware-card__title {
@@ -26,6 +25,10 @@
   margin: 0;
   margin-bottom: 16px;
   padding-right: 30px;
+}
+
+.ware-card__description-break-tablet {
+  display: none;
 }
 
 .ware-card__footer {
@@ -52,4 +55,26 @@
   background-size: 20px 16px;
   background-repeat: no-repeat;
   background-position: 20px center;
+}
+
+@media (min-width: $tablet-width) {
+  .ware-card__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .ware-card__description {
+    margin-bottom: 20px;
+  }
+
+  .ware-card__description-break-tablet {
+    display: inline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .ware-card__description-break-tablet {
+    display: none;
+  }
 }

@@ -6,3 +6,27 @@
   padding: 0;
   list-style: none;
 }
+
+.wares__ware-card {
+  max-width: 280px;
+}
+
+@media (min-width: $tablet-width) {
+  .wares__list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wares__ware-card {
+    max-width: 349px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .wares__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .wares__ware-card {
+    max-width: 317px;
+  }
+}
