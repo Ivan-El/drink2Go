@@ -1,0 +1,23 @@
+.map {
+  width: 100%;
+  height: 420px;
+  background-image: url("../img/map.jpg");
+  background-color: $base-grey;
+}
+
+.leaflet-map-js {
+  z-index: 10;
+  height: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    height: 480px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    height: 540px;
+  }
+}
