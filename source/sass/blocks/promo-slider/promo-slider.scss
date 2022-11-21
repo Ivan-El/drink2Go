@@ -82,13 +82,13 @@
   &:focus,
   &:hover {
     background: no-repeat center/20px
-        url("../../../img/icons/stack.svg#slider-arrow"),
+      url("../../../img/icons/stack.svg#slider-arrow"),
       linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   }
 
   &:active {
     background: no-repeat center/20px
-        url("../../../img/icons/stack.svg#slider-arrow"),
+      url("../../../img/icons/stack.svg#slider-arrow"),
       linear-gradient(
         90deg,
         rgba(120, 89, 207, 0.25) 0%,

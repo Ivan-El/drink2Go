@@ -33,11 +33,11 @@ if (navList) {
 const swiper = new Swiper(".swiper", {
   loop: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".promo-slider__buton--next",
+    prevEl: ".promo-slider__buton--prev",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".promo-slider__pagination",
     type: "bullets",
     bulletcustomSelectent: "span",
     bulletClass: "promo-slider__pagination-bullet",
@@ -46,7 +46,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// Range input
+// Range slider
 
 const rangeSlider = document.querySelector(".range-slider__js");
 const inputMin = document.querySelector("#input-min");
@@ -156,29 +156,95 @@ customSelect.addEventListener("click", function (evt) {
   }
 });
 
-// Map
+// Pagination
 
-const map = L.map ('leaflet-map-js').setView ({
-  lat: 59.968288,
-  lng: 30.317421,
-}, 17);
-
-const mapMainPin = L.icon (
-  {
-    iconUrl: './img/map_pin.svg',
-    iconSize: [52, 52],
-    iconAnchor: [26, 52],
-  }
+const catalogPagination = document.querySelector(".pagination");
+const catalogPaginationPrevButton = catalogPagination.querySelector(
+  ".pagination__link-prev"
+);
+const catalogPaginationNextButton = catalogPagination.querySelector(
+  ".pagination__link-next"
 );
 
-L.tileLayer(
-  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-  {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  },
-).addTo(map);
+// pagination__link-hidden-js
 
-const mainMarker = L.marker (
+if (catalogPagination) {
+  catalogPagination.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    const curTarget = evt.currentTarget;
+    const { target } = evt;
+
+    if (target.classList.contains("pagination__link")) {
+      curTarget
+        .querySelector(".pagination__link--current")
+        .classList.remove("pagination__link--current");
+      target.classList.add("pagination__link--current");
+    }
+    if (target.classList.contains("pagination__link--first")) {
+      catalogPaginationPrevButton.classList.add("pagination__link-hidden-js");
+      catalogPaginationNextButton.classList.contains(
+        "pagination__link-hidden-js"
+      )
+        ? catalogPaginationNextButton.classList.remove(
+            "pagination__link-hidden-js"
+          )
+        : null;
+    }
+    if (target.classList.contains("pagination__link--last")) {
+      catalogPaginationNextButton.classList.add("pagination__link-hidden-js");
+      catalogPaginationPrevButton.classList.contains(
+        "pagination__link-hidden-js"
+      )
+        ? catalogPaginationPrevButton.classList.remove(
+            "pagination__link-hidden-js"
+          )
+        : null;
+    }
+
+    if (
+      !target.classList.contains("pagination__link--first") &&
+      !target.classList.contains("pagination__link--last")
+    ) {
+      catalogPaginationNextButton.classList.contains(
+        "pagination__link-hidden-js"
+      )
+        ? catalogPaginationNextButton.classList.remove(
+            "pagination__link-hidden-js"
+          )
+        : null;
+      catalogPaginationPrevButton.classList.contains(
+        "pagination__link-hidden-js"
+      )
+        ? catalogPaginationPrevButton.classList.remove(
+            "pagination__link-hidden-js"
+          )
+        : null;
+    }
+  });
+}
+
+// Map
+
+const map = L.map("leaflet-map-js").setView(
+  {
+    lat: 59.968288,
+    lng: 30.317421,
+  },
+  17
+);
+
+const mapMainPin = L.icon({
+  iconUrl: "./img/map_pin.svg",
+  iconSize: [38, 50],
+  iconAnchor: [25, 50],
+});
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+}).addTo(map);
+
+const mainMarker = L.marker(
   {
     lat: 59.968288,
     lng: 30.317421,
@@ -186,8 +252,7 @@ const mainMarker = L.marker (
   {
     draggable: false,
     icon: mapMainPin,
-  },
+  }
 );
 
-
-mainMarker.addTo (map);
+mainMarker.addTo(map);
