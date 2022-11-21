@@ -14,6 +14,7 @@
 @media (min-width: $tablet-width) {
   .wares__list {
     grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
 
   .wares__ware-card {

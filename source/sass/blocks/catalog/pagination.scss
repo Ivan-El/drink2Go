@@ -69,17 +69,28 @@
   background-color: transparent;
 }
 
+.pagination .pagination__link-hidden-js {
+  color: transparent;
+  background-color: transparent;
+  cursor: auto;
+}
+
 @media (min-width: $tablet-width) {
   .pagination {
     justify-content: flex-end;
     gap: 0;
     margin-right: -28px;
+    padding-top: 75px;
   }
 
   .pagination__tablet-link-text {
     display: inline;
     font-size: 14px;
     line-height: 24px;
+  }
+
+  .pagination__link--current {
+    margin: 0 20px;
   }
 
   .pagination__link--first {
@@ -95,6 +106,13 @@
     width: 150px;
     background: none;
     background-color: $base-white;
+
+    &:hover,
+    &:focus,
+    &:disabled,
+    &:active {
+      background-image: none;
+    }
   }
 
   .pagination__link-prev {
@@ -109,5 +127,6 @@
 @media (min-width: $desktop-width) {
   .pagination {
     grid-column: 1/ -1;
+    padding-top: 65px;
   }
 }

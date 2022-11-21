@@ -12,7 +12,7 @@
 .no-js .page-header,
 .menu-open-js .page-header {
   margin-bottom: 229px;
-  box-shadow: 0px -1px 0px 0px $base-secondary inset;
+  box-shadow: 0 -1px 0 0 $base-secondary inset;
 }
 
 .page-header__navigation {
@@ -41,7 +41,7 @@
 .page-header__navigation-toggle-bar {
   position: absolute;
   content: "";
-  top: 24px;
+  top: 21px;
   left: 22px;
   display: block;
   width: 16px;
@@ -96,5 +96,16 @@
   .menu-open-js .page-header {
     margin-bottom: 0;
     box-shadow: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    padding: 0 40px;
+  }
+  .page-header__logo-slogan {
+    width: 126px;
+    margin-left: 20px;
+    letter-spacing: 0.07em;
   }
 }

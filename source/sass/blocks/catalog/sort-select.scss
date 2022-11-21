@@ -88,4 +88,9 @@
     justify-content: flex-end;
     margin-bottom: 26px;
   }
+
+  .sort-select__text,
+  .sort-select__toggle {
+    letter-spacing: 0.05em;
+  }
 }

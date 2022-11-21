@@ -20,31 +20,34 @@
 }
 
 .promo-slider__ware {
-  padding: 20px;
-  padding-bottom: 60px;
+  padding: 20px 20px 60px;
   background-color: transparent;
 }
 
 .promo-slider__badge {
-  margin: 10px 0 4px;
+  margin: 5px 0 5px;
+  letter-spacing: 0.12em;
 }
 
 .promo-slider__ware-title {
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   text-align: center;
   font-size: 36px;
   line-height: 48px;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 0.07em;
 }
 
 .promo-slider__ware-description {
-  margin-bottom: 20px;
-  padding: 0 14px;
+  width: 100%;
+  margin-bottom: 19px;
+  padding: 0;
   text-align: center;
+  letter-spacing: 0.08em;
 }
 
 .promo-slider__price {
-  margin-right: 20px;
+  margin-right: 23px;
 }
 
 .promo-slider__ware-old-price {
@@ -54,6 +57,12 @@
   line-height: 32px;
   text-decoration-line: line-through;
   color: $base-primary;
+}
+
+.promo-slider__order-button {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
 }
 
 .promo-slider__button {
@@ -96,11 +105,11 @@
   display: none;
 }
 
-.promo-slider__buton--prev {
+.promo-slider__button--prev {
   left: 0;
 }
 
-.promo-slider__buton--next {
+.promo-slider__button--next {
   right: 0;
   transform: rotate(180deg);
 }
@@ -147,6 +156,10 @@
     line-height: 32px;
   }
 
+  .promo-slider__footer {
+    justify-content: center;
+  }
+
   .promo-slider__button {
     width: 80px;
   }
@@ -156,6 +169,10 @@
   .promo-slider {
     height: 714px;
     margin-bottom: 0;
+  }
+
+  .promo-slider__ware {
+    padding: 30px 80px 80px 104px;
   }
 
   .promo-slider__ware-wrapper {
@@ -172,7 +189,12 @@
     height: 600px;
   }
 
+  .promo-slider__description-wrapper {
+    margin-bottom: 8px;
+  }
+
   .promo-slider__badge {
+    margin-bottom: 2px;
     text-align: left;
   }
 
@@ -191,9 +213,13 @@
     justify-content: left;
   }
 
+  .promo-slider__price {
+    margin-right: 28px;
+  }
+
   .promo-slider__pagination {
     position: absolute;
-    bottom: 60px;
+    bottom: 70px;
     left: calc(50% - 101px);
     z-index: 2;
     display: flex;

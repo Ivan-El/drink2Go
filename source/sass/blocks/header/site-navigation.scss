@@ -56,6 +56,7 @@
     width: fit-content;
     min-width: fit-content;
     height: min-content;
+    letter-spacing: 0.06em;
     border: none;
 
     &:active,
@@ -77,5 +78,11 @@
       height: 2px;
       background-color: $base-primary;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-navigation__link {
+    padding: 32px 32px;
   }
 }

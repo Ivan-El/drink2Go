@@ -3,21 +3,19 @@
   text-decoration: none;
 }
 
-.logo img {
+.logo__img {
   width: 32px;
   height: 36px;
 }
 
 .logo__slogan {
   display: none;
-  width: 126px;
-  margin-left: 20px;
   font-size: 12px;
   line-height: 16px;
 }
 
 @media (min-width: $tablet-width) {
-  .logo img {
+  .logo__img {
     width: 82px;
     height: 36px;
   }
@@ -29,7 +27,7 @@
     align-items: center;
   }
 
-  .logo img {
+  .logo__img {
     width: 170px;
     height: 36px;
   }
