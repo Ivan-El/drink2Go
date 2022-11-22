@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import gulpIf from 'gulp-if';
 import dartSass from "sass";
+import htmlmin from "gulp-htmlmin";
 import gulpSass from "gulp-sass";
 import postcss from 'gulp-postcss';
 import postUrl from 'postcss-url';
@@ -15,12 +16,14 @@ import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
+import ghPages from "gh-pages";
 
 const sass = gulpSass(dartSass);
 let isDevelopment = true;
 
 export function processMarkup () {
   return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
@@ -148,4 +151,8 @@ export function runDev (done) {
     startServer,
     watchFiles
   )(done);
+}
+
+export const deploy = (cb) => {
+  ghPages.publish(path.join(process.cwd(), "./build"), cb);
 }

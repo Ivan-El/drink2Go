@@ -7,8 +7,10 @@
     "autoprefixer": "10.4.13",
     "browser-sync": "2.27.10",
     "del": "7.0.0",
+    "gh-pages": "^4.0.0",
     "gulp": "4.0.2",
     "gulp-html-bemlinter": "2.1.2",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-if": "3.0.0",
     "gulp-libsquoosh": "1.1.2",
     "gulp-plumber": "1.2.1",
@@ -34,7 +36,8 @@
     "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
     "start": "gulp runDev",
     "build": "gulp buildProd",
-    "preview": "gulp buildProd && gulp startServer"
+    "preview": "gulp buildProd && gulp startServer",
+    "deploy": "gulp buildProd && npm start deploy"
   },
   "browserslist": [
     "last 2 versions",
