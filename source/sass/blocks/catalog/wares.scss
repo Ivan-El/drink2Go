@@ -11,6 +11,11 @@
   max-width: 280px;
 }
 
+.ware-card__link {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media (min-width: $tablet-width) {
   .wares__list {
     grid-template-columns: 1fr 1fr;
