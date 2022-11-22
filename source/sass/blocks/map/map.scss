@@ -1,8 +1,10 @@
 .map {
   width: 100%;
   height: 420px;
-  background-image: url("../img/map.jpg");
+  background-image: url("../../img/map.jpg");
   background-color: $base-grey;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .leaflet-map-js {
