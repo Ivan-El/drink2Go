@@ -33,8 +33,8 @@ if (navList) {
 const swiper = new Swiper(".swiper", {
   loop: true,
   navigation: {
-    nextEl: ".promo-slider__buton--next",
-    prevEl: ".promo-slider__buton--prev",
+    nextEl: '.promo-slider__button--next',
+    prevEl: '.promo-slider__button--prev',
   },
   pagination: {
     el: ".promo-slider__pagination",
